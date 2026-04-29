@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    description 'CI/CD pipeline for student-app: builds Node.js app, runs tests, creates Docker image, and deploys container on port 5000'
+
     stages {
         stage('Clone') {
             steps {
@@ -8,22 +10,22 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "No tests implemented"'
+                bat 'echo No tests implemented'
             }
         }
         stage('Docker Build') {
             steps {
-                sh 'docker build -t student-app .'
+                bat 'docker build -t student-app .'
             }
         }
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 5000:3000 student-app'
+                bat 'docker run -d -p 5000:3000 student-app'
             }
         }
     }
