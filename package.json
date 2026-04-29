@@ -1,0 +1,12 @@
+{
+  "name": "student-app-local",
+  "version": "1.0.0",
+  "description": "Simple DevOps Node.js app (local)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
