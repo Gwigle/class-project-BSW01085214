@@ -8,6 +8,6 @@ spec:
     app: student-app
   ports:
   - protocol: TCP
-    port: 6000        # service port
+    port: 80          # service port
     targetPort: 3000  # app port inside pod
     nodePort: 30080   # external NodePort
